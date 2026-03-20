@@ -1,0 +1,17 @@
+{
+  "name": "todo_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "enquirer": "^2.4.1",
+    "inquirer": "^8.2.4",
+    "requirer": "^0.0.4"
+  }
+}
