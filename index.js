@@ -1,25 +1,7 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
-const filename = 'todo.json';
+const {getTodos, saveTodos} = require('./todoService');
 const choices = ['Hampiditra', 'Hijery', 'Hanova' , 'Hamafa', 'Hanamarika ho vita' , 'Hivoaka'];
 
-try {
-    if (!fs.existsSync(filename)) {
-        fs.writeFileSync(filename, JSON.stringify([]));
-        console.log(`${filename} cree avec succes`);
-    }
-} catch (error) {
-    console.log('Erreur trouve:', error);
-}
-
-const getTodos = () => {
-    const data = fs.readFileSync(filename);
-    return JSON.parse(data);
-}
-
-const saveTodos = (todos) => {
-    fs.writeFileSync(filename, JSON.stringify(todos));
-}
 
 const showTodos = () => {
     const data = getTodos();
